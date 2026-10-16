@@ -74,7 +74,8 @@ const techStack = {
   ],
 };
 
-// ===================================
+// =========================git remote add origin https://github.com
+// ==========
 // HELPER & ANIMATION COMPONENTS
 // ===================================
 const LineShadowText = ({ children, className, shadowColor = "#4079ff", ...props }) => {
