@@ -7,6 +7,13 @@ import { FaExternalLinkAlt, FaGithub, FaTimes, FaArrowRight } from 'react-icons/
 // Ganti image dengan screenshot project kamu
 // ==========================================
 const projects = [
+
+  {
+  title: "IT Support",
+  description: "Melakukan deployment perangkat pc dan peripheral dari gudang, lalu melakukan konfigurasi sesuai kebutuhan area kerja",
+  tech: ["Gallery"],
+  image: "/certificate-images/aksiku.png",
+},
  
 ];
 
@@ -60,6 +67,7 @@ const Gallery = () => {
           </button>
         ))}
       </div>
+      
 
       {/* Project Cards */}
       <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">

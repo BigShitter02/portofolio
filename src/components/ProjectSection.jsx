@@ -55,6 +55,32 @@ const userCertificates = [
   image: "/certificate-images/aksiku.png",
   category: "Certificate",
 },
+ {
+  title: "EF-SET English Certificate",
+  description: "Sertifikat EF-SET.",
+  tech: ["Certificate"],
+  link: "/certificate/EF.pdf",
+  image: "/certificate-images/efset.png",
+  category: "Certificate",
+},
+
+{
+  title: "Hardware Basics Cisco Academy",
+  description: "Sertifikat pelatihan Basic Hardware.",
+  tech: ["Certificate"],
+  link: "/certificate/hardware basic.pdf",
+  image: "/certificate-images/hardware.png",
+  category: "Certificate",
+},
+
+{
+  title: "Networking Basics Cisco Academy",
+  description: "Sertifikat pelatihan Basic Network.",
+  tech: ["Certificate"],
+  link: "/certificate/Networking_Basics.pdf",
+  image: "/certificate-images/network.png",
+  category: "Certificate",
+},
 ];
 
 const techStack = {
