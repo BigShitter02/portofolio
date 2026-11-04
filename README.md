@@ -29,7 +29,7 @@ Ini adalah proyek React yang dikembangkan menggunakan Vite — sebuah build tool
 1. **Clone repositori ini:**
 
    ```bash
-   git clone https://github.com/RayImoet/portofolio.git
+   git clone https://github.com/BigShitter02/portofolio.git
    cd portofolio
    ```
 

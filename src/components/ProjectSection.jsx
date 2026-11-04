@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaExternalLinkAlt, FaReact, FaNodeJs, FaHtml5, FaCss3Alt,
-  FaJsSquare, FaTools, FaFigma, FaGithub, FaTimes, FaDownload
+  FaJsSquare, FaTools, FaFigma, FaGithub, FaTimes, FaDownload, 
 } from 'react-icons/fa';
 import {
   SiTailwindcss, SiNextdotjs, SiVercel, SiMongodb,
-  SiExpress, SiPostgresql
+  SiExpress, SiPostgresql, SiVirtualbox,
 } from 'react-icons/si';
 import { PiCodeBold } from "react-icons/pi";
 import { LuBadge } from "react-icons/lu";
@@ -16,6 +16,7 @@ import { useNavbar } from '../contexts/NavbarContext';
 import { supabase } from '../lib/supabase';
 import webpijat from "../assets/images/webpijat.png";
 import pengadaanbarang from "../assets/images/pengadaanbarang.png";
+import porto from "../assets/images/porto.png";
 
 
 
@@ -23,28 +24,42 @@ import pengadaanbarang from "../assets/images/pengadaanbarang.png";
 // DATA PROYEK (FALLBACK - will be replaced by DB data)
 // ===================================
 const dummyProjects = [
+
+
+   {
+    title: "Personal Portfolio Website  ",
+    description: "Mengembangkan website portfolio pribadi sebagai media untuk menampilkan profil, pengalaman kerja, keterampilan, dan dokumentasi project secara profesional. Website dibangun menggunakan HTML, CSS, Tailwind CSS, dan Vite dengan desain responsif, tampilan modern, serta navigasi yang mudah digunakan. Portfolio ini dirancang untuk memberikan informasi mengenai pengalaman dan kemampuan secara terstruktur serta mudah diakses melalui berbagai perangkat.",
+    tech: ["HTML", "CSS", "JavaScript", "Tailwind CSS" , "VITE"],
+    link: "https://portofolio-raymondo.vercel.app/",
+    image: porto,
+    category: "Web/Apps",
+  },
+
   {
-    title: "Landing Page Pijat",
+    title: "Landing Page Massage",
     description: "Landing page jasa pijat yang dibangun dengan HTML, CSS, Javascript di-deploy di Vercel.",
     tech: ["HTML", "CSS", "Javascript",],
     link: "https://pijat-panggilan-jogja-lavender.vercel.app/",
     image: webpijat,
     category: "Web/Apps",
   },
-  {
+
+
+   {
     title: "Inventory Management Website",
-    description: "RESTful API untuk platform e-commerce dengan fitur otentikasi, manajemen produk, dan transaksi.",
+    description: "Mengembangkan website pengadaan barang untuk keperluan Tugas Akhir Kuliah",
     tech: ["Laravel", "PHP", "MySQL", "HTML"],
-    link: "https://github.com/username/ecommerce-api",
+    link: "",
     image: pengadaanbarang,
     category: "Web/Apps",
   },
-  
+
+
 ];
 
 // ===================================
 // DATA SERTIFIKAT Raymondo Stiven Sugiarto
-// ===================================
+// ===================================  
 const userCertificates = [
   
   {
@@ -96,8 +111,9 @@ const techStack = {
   tools: [
     { name: "Git & GitHub", icon: <FaGithub className="dark:text-white text-slate-900" /> },
     { name: "Vercel", icon: <SiVercel className="dark:text-white text-slate-900" /> },
+    { name: "VirtualBox", icon: <SiVirtualbox className="dark:text-white text-slate-900" /> },
     { name: "Tools Lain", icon: <FaTools className="text-gray-400" /> },
-  ],
+  ]
 };
 
 // =========================git remote add origin https://github.com
@@ -245,21 +261,13 @@ const ProjectDetailModal = ({ project, onClose }) => {
                   className="flex-1 flex items-center justify-center gap-2 px-6 py-4 dark:bg-gradient-to-r dark:from-cyan-600 dark:to-emerald-600 dark:hover:from-cyan-500 dark:hover:to-emerald-500 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/30 hover:-translate-y-1"
                 >
                   <FaExternalLinkAlt />
-                  <span>Live Demo</span>
+                  Live Demo
                 </a>
               )}
 
               {/* Assuming GitHub link might be stored in a different field or same link if generic */}
               {/* For now using project.link as fallback, ideally should have github specific field passed */}
-              <a
-                href={project.link} // Adjust if you have a specific github_url field
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 px-6 py-4 dark:bg-slate-800 bg-slate-700 dark:hover:bg-slate-700 hover:bg-slate-600 text-white font-bold rounded-xl dark:border-slate-700 border-slate-600 transition-all duration-300 hover:-translate-y-1"
-              >
-                <FaGithub className="text-xl" />
-                <span>Source Code</span>
-              </a>
+            
             </div>
           </div>
         </div>

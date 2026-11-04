@@ -9,13 +9,68 @@ import { FaExternalLinkAlt, FaGithub, FaTimes, FaArrowRight } from 'react-icons/
 const projects = [
 
   {
-  title: "IT Support",
-  description: "Melakukan deployment perangkat pc dan peripheral dari gudang, lalu melakukan konfigurasi sesuai kebutuhan area kerja",
-  tech: ["Gallery"],
-  image: "/certificate-images/aksiku.png",
+  title: "Workstation & Peripheral Deployment",
+  description: "Melakukan pengambilan dan pemindahan PC serta perangkat peripheral, termasuk printer, keyboard, dan mouse, dari gudang menggunakan troli untuk proses instalasi dan penempatan di area kerja yang telah ditentukan.",
+  tech: ["IT Support | Workstation Deployment"],
+  image: "/certificate-images/pengambilanpc.png",
+  
 },
- 
+
+{
+  title: "Workstation Installation – Emergency Department (IGD)",
+  description: "Melakukan persiapan dan pemindahan perangkat komputer menggunakan troli ke area Instalasi Gawat Darurat (IGD) untuk mendukung proses pemasangan workstation sesuai kebutuhan operasional.",
+  tech: ["IT Support | Workstation Deployment"],
+  image: "/certificate-images/igd.png",
+  
+  
+},
+
+{
+  title: "Workstation Deployment – Office Floor 8",
+  description: "Melakukan instalasi 24 unit PC beserta perangkat peripheral di ruang office lantai 8 rumah sakit, mencakup instalasi Windows 10 dan Microsoft Office serta konfigurasi dan setup perangkat untuk memastikan workstation siap digunakan sesuai kebutuhan operasional.",
+  tech: ["IT Support | Workstation Deployment"],
+  image: "/certificate-images/officelantai8.png",
+  
+},
+{
+  title: "Windows 10 Installation & Setup",
+  description: "Melakukan instalasi sistem operasi Windows 10 pada ruang billing lantai 1 serta mempersiapkan perangkat untuk mendukung proses konfigurasi dan kebutuhan operasional.",
+  tech: ["IT Support | OS Installation"],
+  image: "/certificate-images/windows10.png",
+  
+  
+},
+
+{
+  title: "Workstation Installation – Registration Area, Floor 4",
+  description: "Melakukan instalasi dan persiapan workstation di area pendaftaran lantai 4 rumah sakit, mencakup pemasangan perangkat PC, penataan workstation, serta instalasi Windows 10 untuk mendukung kesiapan perangkat sebelum digunakan dalam operasional pendaftaran.",
+  tech: ["IT Support | Workstation Deployment"],
+  image: "/certificate-images/lantai4.png",
+  
+  
+},
+
+{
+  title: "Data Entry & Data Processing – ATR/BPN",
+  description: "Melakukan input, pemeriksaan, dan perbaikan data mentah dari Microsoft Excel ke dalam website ATR/BPN. Memastikan kesesuaian dan keakuratan data yang dimasukkan serta melakukan koreksi terhadap data yang tidak sesuai untuk mendukung pengelolaan data administrasi.",
+  tech: ["Data Entry", "Microsoft Excel", "Data Processing"],
+  image: "/certificate-images/atrpbn.png",
+  
+  
+},
+
+{
+  title: "Data Validation – SITATA",
+  description: "Melakukan validasi data pertanahan yang telah diperbaiki melalui aplikasi SITATA untuk memastikan kesesuaian dan kelengkapan data. Memeriksa hasil validasi, mengidentifikasi data yang belum valid, serta melakukan tindak lanjut terhadap item yang memerlukan perbaikan.",
+  tech: ["Data Validation", "Data Processing", "SITATA"],
+  image: "/certificate-images/sitata.jpeg",
+},
+
+
+
 ];
+
+
 
 const categories = [];
 
@@ -49,6 +104,8 @@ const Gallery = () => {
           Kumpulan dokumentasi kegiatan saya saat bekerja.
         </p>
       </div>
+
+      
 
       {/* Filter */}
       <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-10">
@@ -89,13 +146,12 @@ const Gallery = () => {
                 onClick={() => setSelectedProject(project)}
                 className="relative block w-full h-52 overflow-hidden text-left"
                 aria-label={`Lihat ${project.title}`}
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
-                />
+                              >
+              <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-48 object-cover"
+            />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent opacity-80" />
                 <span className="absolute left-4 bottom-4 px-3 py-1 rounded-full bg-cyan-400/15 border border-cyan-300/30 text-cyan-200 text-[11px] font-semibold backdrop-blur-md">
                   {project.category}
@@ -176,7 +232,7 @@ const Gallery = () => {
               <img
                 src={selectedProject.image}
                 alt={selectedProject.title}
-                className="w-full h-56 md:h-96 object-cover"
+                className="w-full h-56 md:h-96 object-contain"
               />
 
               <div className="p-6 md:p-8">
@@ -199,24 +255,8 @@ const Gallery = () => {
                 </div>
 
                 <div className="flex flex-wrap gap-3 mt-7">
-                  <a
-                    href={selectedProject.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => selectedProject.demo === '#' && e.preventDefault()}
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-white font-semibold transition-colors"
-                  >
-                    <FaExternalLinkAlt /> Live Demo
-                  </a>
-                  <a
-                    href={selectedProject.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => selectedProject.github === '#' && e.preventDefault()}
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl dark:bg-white/10 bg-slate-100 dark:text-white text-slate-700 font-semibold transition-colors"
-                  >
-                    <FaGithub /> GitHub
-                  </a>
+                  
+                 
                 </div>
               </div>
             </motion.div>
